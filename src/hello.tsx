@@ -1,6 +1,7 @@
 import {TextField} from '@material-ui/core'
 import React, {FC, useState} from 'react'
-import {MyAutoComplete} from './MyAutocomplete';
+import Autocomplete from '@material-ui/lab/Autocomplete/Autocomplete';
+import './hello.css';
 
 type Option = { label: string, value: string }
 
@@ -17,8 +18,8 @@ export const Hello: FC = () => {
   // `Material-UI: A component is changing the uncontrolled value state of Autocomplete to be controlled.`
   const [selected, setSelected] = useState<Option | null>(null)
 
-  return <div>
-    <MyAutoComplete
+  return <div className={'Hello'}>
+    <Autocomplete
       options={options}
       getOptionLabel={(option) => option.label}
       value={selected}

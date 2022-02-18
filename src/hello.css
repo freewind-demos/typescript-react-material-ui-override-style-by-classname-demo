@@ -1,0 +1,12 @@
+/*
+Note: Not work, since our styles are load before than material-ui, will be overridden.
+.MuiAutocomplete-input {
+  border: 3px solid red;
+}
+*/
+
+/* So we have to add a container class to force it have a higher priority */
+
+.Hello .MuiAutocomplete-input {
+  border: 3px solid red;
+}

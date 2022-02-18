@@ -1,9 +1,17 @@
-TypeScript React "material-ui" Styled AutoComplete Demo
+TypeScript React Material UI Override Style by Class Name Demo
 ===================================
 
-FIXME: 搞不定类型 
+material-ui 生成的DOM中包括预定义的classNames，我们可以override
 
-https://material-ui.com/customization/components/#shorthand
+需要注意的是，要给自己的组件外面放一个root class，然后再:
+
+```
+.rootClass .MuiAutocomplete-input {
+  // override
+}
+```
+
+否则的话，我们定义的`.MuiAutocomplete-input`由于被页面先load，反而会被material-ui自己的样式覆盖。
 
 ```
 npm install
